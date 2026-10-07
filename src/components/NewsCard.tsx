@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface News {
     id: string;
@@ -10,13 +11,14 @@ interface News {
     imageAlt: string;
 }
 
-
 const NewsCard = ({ news }: { news: News }) => {
     return (
-        <div>
-            <div className="card bg-base-100 shadow-sm h-full">
+        <Link href={`/details/${news.id}`} className='h-full'>
+            <div className="h-full"> 
+            <div className="card bg-base-100 border border-transparent shadow-sm h-full hover:border-red-200 transition-colors duration-200">
                 <figure>
                     <Image
+                        className='w-full hover:scale-105 transition-transform duration-300'
                         src={news.imageUrl}
                         alt={news.imageAlt}
                         height={200}
@@ -29,6 +31,7 @@ const NewsCard = ({ news }: { news: News }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 

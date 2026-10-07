@@ -33,6 +33,7 @@ const Header = () => {
         </div>
 
         <NavLinks></NavLinks>
+        <Marquee></Marquee>
         </header>
 
     );

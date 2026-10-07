@@ -18,7 +18,7 @@ const MainNews = ({ news }: {news:News[]}) => {
     const [firstNews, ...otherNews] = news;
 
     return (
-        <div className="flex gap-5">
+        <div className="flex gap-5 mt-5">
             {/* First */}
             <div className="card bg-base-100 w-96 shadow-sm">
                 <figure>

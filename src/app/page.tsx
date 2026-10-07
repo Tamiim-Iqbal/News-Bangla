@@ -1,5 +1,6 @@
 import MainNews from "@/components/MainNews";
 import Marquee from "@/components/Marquee";
+import MostRead from "@/components/MostRead";
 import NewsCard from "@/components/NewsCard";
 
 interface OtherSection {
@@ -23,12 +24,15 @@ export default async function Home() {
   const sections = data.data;
   const mainNews = sections[0].articles;
 
-  const otherSections: OtherSection[] = sections.slice(1);
-  console.log(otherSections);
+  const otherSections: OtherSection[] = [
+  ...sections.slice(1, 2),
+  ...sections.slice(3, 4),
+  ...sections.slice(5, -1),
+  ];
+  //console.log(otherSections);
 
   return (
     <div>
-       <Marquee></Marquee>
         <div className="grid grid-cols-3 w-10/12 mx-auto gap-10 mt-10">
           {/* news content */}
             <div className="col-span-2">
@@ -47,8 +51,9 @@ export default async function Home() {
               }
               </div>
             </div>
-            <div className="bg-green-500 col-span-1">
-              h2
+            { /* Right Sidebar: Most Read */   }
+            <div className=" col-span-1">
+              <MostRead></MostRead>
             </div>
         </div>
     </div>
