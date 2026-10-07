@@ -12,12 +12,12 @@ const Marquee = async() => {
     const response = await fetch('https://news-api-v2.vercel.app/api/news?limit=10')
     const data = await response.json()
     const headlines: Headlines[] = data.data
-    console.log(headlines)
+    // console.log(headlines)
 
 
     return (
         <div className="bg-red-700 text-white">
-            <div className="flex w-11/12 mx-auto">
+            <div className="flex w-10/12 mx-auto">
                 <div className="bg-red-800 py-1 px-2 font-bold">সর্বশেষ</div>
                 <MarqueeText className="py-1" direction="right" pauseOnHover={true} duration={10} >
             {

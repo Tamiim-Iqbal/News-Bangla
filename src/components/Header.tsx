@@ -9,7 +9,7 @@ const Header = () => {
     });
     return (
         <header>
-            <div className="navbar mt-1 w-11/12 mx-auto">
+            <div className="navbar mt-1 w-10/12 mx-auto">
 
             <div className="navbar-start">
 
@@ -27,13 +27,12 @@ const Header = () => {
             </div>
 
             <div className="navbar-end gap-3">
-                <button className="">Sign In</button>
-                <button className="btn bg-red-700 text-white">Sign Up</button>
+                <button className="">সাইন ইন</button>
+                <button className="btn bg-red-700 text-white">সাইন আপ</button>
             </div>
         </div>
 
         <NavLinks></NavLinks>
-        <Marquee></Marquee>
         </header>
 
     );
